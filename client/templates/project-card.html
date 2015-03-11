@@ -1,0 +1,34 @@
+<template name="projectCard">
+	<div class="col-md-3">
+		<div class="project-card">
+			<div class="title">
+				<h2 class="client">{{client}}</h2>
+			</div>
+			<div class="subtitle">
+				<h4 class="projectnumber">{{jobNumber}}</h4>
+			</div>
+			<div class="projectinfo">
+				<div class="amount">
+					<h5 class="headlineamount"><i class="fa fa-eur"></i> Rechnungsbetrag</h5>
+					<h1 class="cash">{{amount}}€</h1>
+				</div>
+
+				<div class="team">
+					<h5><i class="fa fa-users"></i> Team</h5>
+					<ul class="teamlist">
+						<li class="teammember"><img src="img/team_1.png"></li>
+						<li class="teammember"><img src="img/team_2.png"></li>
+						<li class="teammember"><img src="img/team_3.png"></li>
+						<li class="teammember"><img src="img/team_4.png"></li>	  			
+						<li class="teammember"><img src="img/team_6.png"></li>
+
+					</ul>
+				</div>
+			</div>	
+
+			<div class="date">
+				<h4 class="projectdate"><i class="fa fa-calendar"></i> {{date}}</h4>
+			</div>
+		</div>
+	</div>
+</template>

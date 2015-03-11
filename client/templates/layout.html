@@ -1,0 +1,36 @@
+<template name="layout">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      {{#if currentUser}}<a class="btn btn-primary btn-sm nav-btn" href="/new-project" role="button"><i class="fa fa-plus-circle fa"></i> Projekt erstellen</a>{{/if}}
+
+<!--       <a class="navbar-brand" href="/">DarkHorseCashMoney</a>
+ -->    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/project">{{#if currentUser}}<i class="fa fa-cube"></i> Projekte{{/if}}</a></li>
+        <li><a href="/overview">{{#if currentUser}}<i class="fa fa-tachometer"></i> Overview{{/if}}</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-usr">
+      <li><i class="fa fa-user"></i></li>
+      <li>{{> loginButtons align="right"}}</li>
+      </ul>
+      </div><!--/.nav-collapse -->
+
+</div>
+</nav>	
+
+<div class="container">
+    <main>
+      {{> yield}}
+    </main>
+  </div>
+</template>
